@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilbariq's Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="hero">
+            <h1><span class="typewriter"></span></h1>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Saya adalah mahasiswa di Binus University, jurusan Computer Science, dengan kemauan yang besar untuk terus belajar dan mengembangkan hal-hal yang telah saya pelajari. Saya memiliki keahlian di bidang pemrograman, desain UI/UX, perencanaan pembuatan dan pengembangan aplikasi, IT Business Analyst & Support, dan kerja sama tim. Saya juga memiliki pengalaman magang di PT Sarana Multi Infrastruktur, sebuah perusahaan BUMN di bawah naungan Kementerian Keuangan, memberikan kesempatan bagi saya untuk mengambil peran sebagai UI/UX Designer sekaligus IT Business Analyst. Dengan semangat untuk terus belajar, saya selalu terbuka terhadap tantangan baru, terutama di dunia teknologi yang terus berkembang. Saya percaya bahwa pembelajaran tidak pernah berhenti, dan saya berkomitmen untuk terus mengasah kemampuan saya di industri IT.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS & JavaScript</li>
+            <li>UI/UX Design</li>
+            <li>IT Business Analyst</li>
+            <li>Data Entry</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Berikut adalah beberapa proyek yang telah saya kerjakan.</p>
+        <ul>
+            <li>Project 1: Website Design</li>
+            <li>Project 2: Aplikasi Mobile</li>
+            <li>Project 3: Sistem Informasi</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2024 Nabil Bariq Rabbani</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = 'Selamat Datang di Portofolio Nabil Bariq R.';
+            let i = 0;
+            const speed = 48;
+
+            function typeWriter() {
+                if (i < text.length) {
+                    document.querySelector('.typewriter').textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+        });
+    </script>
+
+</body>
+</html>
