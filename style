@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #007acc;
+    border-radius: 5px;
+}
+
+#home {
+    height: 100vh;
+    background-color: #112240;
+    /* background-image: url('fotooo.jpg'); Replace with your photo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.typewriter {
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+#about {
+    padding: 50px 20px;
+    background-color: #0a0f27;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #61dafb;
+}
+
+#about p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+#skills {
+    padding: 50px 20px;
+    background-color: #112240;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #61dafb;
+}
+
+#skills ul {
+    list-style: none;
+}
+
+#skills ul li {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#portfolio {
+    padding: 50px 20px;
+    background-color: #0a0f27;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #61dafb;
+}
+
+#portfolio ul {
+    list-style: none;
+}
+
+#portfolio ul li {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+footer {
+    padding: 20px;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+}
