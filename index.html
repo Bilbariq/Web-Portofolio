@@ -14,6 +14,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -26,42 +27,51 @@
     <section id="about">
         <h2>About Me</h2>
         <p>
-            Saya adalah mahasiswa di Binus University, jurusan Computer Science, dengan kemauan yang besar untuk terus belajar dan mengembangkan hal-hal yang telah saya pelajari. Saya memiliki keahlian di bidang pemrograman, desain UI/UX, perencanaan pembuatan dan pengembangan aplikasi, IT Business Analyst & Support, dan kerja sama tim. Saya juga memiliki pengalaman magang di PT Sarana Multi Infrastruktur (Persero), sebuah perusahaan BUMN di bawah naungan Kementerian Keuangan, memberikan kesempatan bagi saya untuk mengambil peran sebagai UI/UX Designer sekaligus IT Business Analyst dan berkontribusi dalam pengembangan dan perencanaan aplikasi di PT. SMI (Persero). Dengan semangat untuk terus belajar, saya selalu terbuka terhadap tantangan baru, terutama di dunia teknologi yang terus berkembang. Saya percaya bahwa pembelajaran tidak pernah berhenti, dan saya berkomitmen untuk terus mengasah kemampuan saya di industri IT.
+            Saya adalah mahasiswa di Binus University, jurusan Computer Science, dengan kemauan yang besar untuk terus belajar dan mengembangkan hal-hal yang telah saya pelajari. Saya memiliki keahlian di bidang pemrograman, desain UI/UX, perencanaan pembuatan dan pengembangan aplikasi, IT Business Analyst & Support, dan kerja sama tim. Saya juga memiliki pengalaman magang di PT Sarana Multi Infrastruktur (Persero), sebuah perusahaan BUMN di bawah naungan Kementerian Keuangan, memberikan kesempatan bagi saya untuk mengambil peran sebagai UI/UX Designer sekaligus IT Business Analyst dan berkontribusi dalam pengembangan dan perencanaan aplikasi di PT. SMI (Persero). Dengan semangat untuk terus belajar, saya selalu terbuka terhadap tantangan baru, terutama di dunia teknologi yang terus berkembang. Saya percaya bahwa pembelajaran tidak pernah berhenti, dan berkomitmen untuk terus mengasah kemampuan saya di bidang IT.
         </p>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>IT Business Analyst</li>
+            <li>IT Business Analyst & Support</li>
             <li>HTML, CSS & JavaScript</li>
             <li>UI/UX Design</li>
             <li>Data Entry</li>
-            <li>Python</li>
-            <li>Python</li>
-            <li>Python</li>
-            <li>Python</li>
-
+            <li>Laravel</li>
+            <li>Speedtyping</li>
+            <li>C, Java, Python</li>
+            <li>Agile Methodologies</li>
+            <li>Microsoft Offices</li><br>
+            <li>Saya terbuka untuk mempelajari Skill baru selama diberikan waktu untuk belajar dan berkembang.</li>
         </ul>
     </section>
 
     <section id="portfolio">
-        <h2>Portfolio</h2>
+        <h2>Portfolio (Under Construction)</h2>
         <p>Berikut adalah beberapa proyek yang telah saya kerjakan.</p>
         <ul>
-            <li>Project 1: Website Design</li>
-            <li>Project 2: Aplikasi Mobile</li>
-            <li>Project 3: Sistem Informasi</li>
+            <li>Project 1: FinAlly</li>
+            <li>Project 2: SMI TJSL</li>
+            <li>Project 3: SMI BOT</li>
         </ul>
     </section>
 
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:nabil.rabbani@binus.ac.id">nabil.rabbani@binus.ac.id</a></p>
+        <p>Instagram: <a href="https://instagram.com/bilbariq" target="_blank">@bilbariq</a></p>
+    </section>
+
     <footer>
-        <p>© 2024 Nabil Bariq Rabbaniiii</p>
+        <p>© 2024 Nabil Bariq Rabbani</p>
     </footer>
+
+    <button id="back-to-top">⬆ Kembali Ke Atas</button>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const text = 'Selamat Datang di Portofolio Nabil Bariq Rabbani. BELOM BERES INI COK SABAR!!!';
+            const text = 'Selamat Datang di Portofolio Nabil Bariq Rabbani.';
             let i = 0;
             const speed = 48;
 
@@ -74,6 +84,29 @@
             }
 
             typeWriter();
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        backToTopButton.addEventListener('click', function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         });
     </script>
 

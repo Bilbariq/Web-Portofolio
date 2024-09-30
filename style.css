@@ -8,6 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     color: white;
     scroll-behavior: smooth;
+    background-color: #f4f4f4;
 }
 
 nav {
@@ -141,9 +142,65 @@ nav ul li a:hover {
     margin: 10px 0;
 }
 
+#contact {
+    padding: 50px 20px;
+    background-color: #112240;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #61dafb;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #61dafb;
+    font-size: 18px;
+}
+
+#contact a:hover {
+    color: #007acc;
+}
+
 footer {
     padding: 20px;
     background-color: #000;
     text-align: center;
     color: #fff;
 }
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#back-to-top:hover {
+    background-color: #555;
+}
+
+window.onscroll = function() {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+};
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
